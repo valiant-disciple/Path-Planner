@@ -5,17 +5,17 @@ Created on Fri Mar  3 17:23:33 2023
 """
 import socket
 
-#import numpy as np
-#import cv2
-#from PIL import Image
+import numpy as np
+import cv2
+from PIL import Image
 import Algorithm
 import ObjectDetection 
 
-data = ObjectDetection.Starter() #Object Detection starts here, returns pixel map of img.
+# data = ObjectDetection.Starter() #Object Detection starts here, returns pixel map of img.
 # print(data.dtype)
 
-# image = Image.open('pixel_map.png')
-# data = np.array(image)
+image = Image.open('pixel_map.png')
+data = np.array(image)
 
 myAlgo = Algorithm.A_Star_Algo(data) #Runs the path-finding algorithm.
 protocol = myAlgo.algo_exec() #Text Protocol for motion.
